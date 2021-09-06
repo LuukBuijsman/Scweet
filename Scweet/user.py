@@ -103,6 +103,7 @@ def get_users_followers(users, env, verbose=1, headless=True, wait=2, limit=floa
         file_path = 'outputs/' + str(users[0]) + '_' + str(users[-1]) + '_' + 'followers.json'
     else:
         file_path = file_path + str(users[0]) + '_' + str(users[-1]) + '_' + 'followers.json'
+    print(file_path)
     with open(file_path, 'w') as f:
         json.dump(followers, f)    
         print(f"file saved in {file_path}")
